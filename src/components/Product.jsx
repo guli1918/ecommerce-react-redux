@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FavoriteBorderOutlined, SearchOutlined, ShoppingCartOutlined } from '@material-ui/icons';
+import { mobile } from '../responsive';
 
 const Info = styled.div`
 	opacity: 0;
@@ -39,6 +40,7 @@ const Container = styled.div`
 	justify-content: center;
 	background-color: #f5fbfd;
 	position: relative;
+	${mobile({ minWidth: '360px' })}
 
 	&:hover ${Info} {
 		opacity: 1;

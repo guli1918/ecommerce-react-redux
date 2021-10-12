@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mobile } from '../responsive';
 
 const Container = styled.div`
 	flex: 1;
@@ -10,6 +11,7 @@ const Image = styled.img`
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+	${mobile({ height: '30vh' })}
 `;
 const Info = styled.div`
 	position: absolute;
@@ -34,8 +36,11 @@ const Button = styled.button`
 	cursor: pointer;
 	font-weight: 600;
 	width: 15%;
+	transition: all 1s ease;
+	${mobile({ width: '25%' })}
 	:hover {
 		font-weight: 700;
+		transform: scale(1.2);
 	}
 	:active {
 		font-weight: 900;
