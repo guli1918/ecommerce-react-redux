@@ -42,7 +42,7 @@ function Pay() {
 			try {
 				const res = await axios.post('http://localhost:5000/api/checkout/payment', {
 					tokenId: stripeToken.id,
-					amoun: 2000,
+					amount: 2000,
 				});
 				console.log(res.data);
 			} catch (err) {
@@ -50,7 +50,7 @@ function Pay() {
 			}
 		};
 		stripeToken && makeRequest();
-	});
+	}, [stripeToken]);
 	return (
 		<Container>
 			<StripeCheckout
